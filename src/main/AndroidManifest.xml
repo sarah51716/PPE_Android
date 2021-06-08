@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".connexion"></activity>
         <activity android:name=".menuprincipal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,11 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fraisauforfait"></activity>
-        <activity android:name=".fraishorsforfait"></activity>
-        <activity android:name=".envoidesdonneesvers"></activity>
-        <activity android:name=".parametre"></activity>
-        <activity android:name=".synthesedumois"></activity>
+        <activity android:name=".fraisauforfait" />
+        <activity android:name=".fraishorsforfait" />
+        <activity android:name=".envoidesdonneesvers" />
+        <activity android:name=".parametre" />
+        <activity android:name=".synthesedumois" />
     </application>
 
 </manifest>
