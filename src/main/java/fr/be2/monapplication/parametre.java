@@ -7,12 +7,13 @@ import android.view.View;
 
 public class parametre extends AppCompatActivity {
 
+    //constructeur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parametre);
     }
-    public void clique_btn6 (View view){
+    public void clique_retour (View view){
         finish();
     }
 }

@@ -49,14 +49,18 @@ public class fraisauforfait extends menuprincipal  {
         bdd = new SQLHelper (this);
 
     }
-
+    /*
+    fonction permettant de relier les variables avec les objets graphiques correspondants
+     */
     private void init() {
         typefrais= findViewById(R.id.typefrais);
         quantite= findViewById(R.id.quantite);
         btnAjouter= findViewById(R.id.btnAjouter);
         MaDate= findViewById(R.id.Date);
     }
-
+    /*
+    fonction affichant un calendrier avec une date a choisir
+     */
     public void ShowCal(View v)
     {
         picker = new DatePickerDialog (fraisauforfait.this ,
@@ -74,7 +78,9 @@ public class fraisauforfait extends menuprincipal  {
 
     }
 
-
+    /*
+    fonction affichant divers messages
+     */
     public void afficherMessage(String titre,String message){
         AlertDialog.Builder Builder=new AlertDialog.Builder(this ) ;
         Builder.setCancelable(true);
@@ -84,7 +90,9 @@ public class fraisauforfait extends menuprincipal  {
 
     }
 
-
+    /*
+    fonction avec differents par boutons permettant d'aller a la page suivante
+     */
     public void MonClick(View v ) {
         switch (v.getId()) {
             case R.id.btnAjouter:
@@ -112,6 +120,9 @@ public class fraisauforfait extends menuprincipal  {
         }
     }
 
+    /*
+    fonction du bouton de retour
+     */
     public void clique_retour(View view) {
         finish();
     }
@@ -120,8 +131,6 @@ public class fraisauforfait extends menuprincipal  {
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
-
-
 
 
     private void afficherMessage() {

@@ -14,6 +14,7 @@ public class menuprincipal extends AppCompatActivity {
     private int message;
     private Object String;
 
+    //constructeur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +22,7 @@ public class menuprincipal extends AppCompatActivity {
     }
 
     /**
-     * Méthode clic bouton menu 1
-     * appliquée sur l'objet "frais hors forfait"
-     * lance la classe Menuprincipal
+     * fonction permettant d'acceder a la page souhaitee en fonction du bouton
      */
 
     public void unclique(View view) {

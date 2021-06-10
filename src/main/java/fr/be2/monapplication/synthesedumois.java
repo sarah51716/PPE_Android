@@ -23,6 +23,7 @@ public class synthesedumois extends AppCompatActivity {
     private SQLHelper dbHelper;
     private SimpleCursorAdapter dataAdapter;
 
+    //constructeur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +34,13 @@ public class synthesedumois extends AppCompatActivity {
         //Générer le ListView a partir de SQLite Database
         displayListView();
     }
+
+    /*
+    fonction qui permet de remplir le listView contenant tous les frais
+     */
     private void displayListView() {
 
-        Cursor cursor = dbHelper.fetchAllCountries();
+        Cursor cursor = dbHelper.fetchAllFrais();
 
         // Les colonnes que l’on veut lier
         String[] columns = new String[] {
@@ -88,6 +93,9 @@ public class synthesedumois extends AppCompatActivity {
             }
         });
     }
+    /*
+    fonction permettant de faire la suppression en deux etapes avec un message de preventione
+     */
     public void doDeleteOnClick(View v) {
         Toast.makeText(v.getContext(),"You clicked the DELETE button for id " + ((String) v.getTag()), Toast.LENGTH_SHORT).show();
     }

@@ -22,14 +22,20 @@ public class SQLHelper extends SQLiteOpenHelper {
         public static final String KEY_QUANTITE = "QUANTITE";
         public static final String KEY_TYPEDEFRAIS = "TYPEDEFRAIS";
 
+        private static final String DB_TABLE1 = "Visiteur";
+        public static final String KEY_ID2 = "ID";
+
         private static final String TAG = "SQLHelper";
         private SQLHelper dbHelper;
         private SQLiteDatabase db;
 
         // private static final String CREATE_TABLE = "CREATE TABLE " + DB_TABLE +" ("+ ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + NAME + " TEXT" + ")";
         private static final String CREATE_TABLE = "CREATE TABLE NoteDeForfait (ID INTEGER PRIMARY KEY AUTOINCREMENT, TYPEDEFRAIS TEXT, LIBELLE TEXT, QUANTITE INTEGER, MONTANT FLOAT,DATEDEFRAIS TEXT, DATEDESAISIT DATETIME DEFAULT CURRENT_TIMESTAMP)";
+        private static final String CREATE_TABLE1 = "CREATE TABLE Visiteur (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOM TEXT, PRENOM TEXT, PASSWORD TEXT)";
 
-        public SQLHelper(Context context){
+
+
+    public SQLHelper(Context context){
             super(context,DB_NAME,null,1);
         }
 
@@ -51,6 +57,9 @@ public class SQLHelper extends SQLiteOpenHelper {
             onCreate(sqLiteDatabase);
         }
 
+        /*
+        fonction permettant d'enregistrer les informations d'une fiche dans les tables concernees
+         */
         public boolean insertData(String typefrais, String libelle, Integer quantite, Double montant, String date){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
@@ -64,7 +73,10 @@ public class SQLHelper extends SQLiteOpenHelper {
 
         }
 
-        public Cursor fetchAllCountries() {
+        /*
+        fonction interrogeant la bdd et retournant tous les frais enregistres dans la bdd
+         */
+        public Cursor fetchAllFrais() {
             SQLiteDatabase db = this.getReadableDatabase();
             Cursor mCursor = db.query(DB_TABLE, new String[] {"rowid _id",KEY_ID,
                             KEY_LIBELLE, KEY_MONTANT, KEY_DATEDESAISIT, KEY_DATEDEFRAIS, KEY_QUANTITE,KEY_TYPEDEFRAIS},
@@ -76,6 +88,9 @@ public class SQLHelper extends SQLiteOpenHelper {
             return mCursor;
         }
 
+        /*
+        fonction interrogeant la BDD
+         */
         public Cursor viewData() {
             SQLiteDatabase db = this.getReadableDatabase();
             String query = "select * from " + DB_TABLE;
@@ -84,6 +99,9 @@ public class SQLHelper extends SQLiteOpenHelper {
 
         }
 
+        /*
+        fonction permettant de supprimer un frais ayant pour ID, l'ID place en prametre
+         */
         public boolean deleteData(Integer ID) {
             SQLiteDatabase db = this.getWritableDatabase();
 

@@ -16,7 +16,7 @@ public class fraishorsforfait extends AppCompatActivity {
     EditText montant;
     EditText date;
 
-
+//constructeur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,9 @@ public class fraishorsforfait extends AppCompatActivity {
         montant=findViewById(R.id.montant);
     }
 
+    /*
+    fonction ajoutant un frais dans la BDD
+     */
     public void save_DATA(View view){
         String libelle1 = libelle.getText().toString();
         Double montant1 = Double.parseDouble(montant.getText().toString());
