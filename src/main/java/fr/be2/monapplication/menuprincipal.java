@@ -45,6 +45,10 @@ public class menuprincipal extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), envoidesdonneesvers.class);
             startActivity(intent);
         }
+        if (view.getId() == R.id.btnfraisexc) {
+            Intent intent = new Intent(getApplicationContext(), fraisexceptionnels.class);
+            startActivity(intent);
+        }
 
         if (view.getId() == R.id.btnparametres) {
             Intent intent = new Intent(getApplicationContext(), parametre.class);

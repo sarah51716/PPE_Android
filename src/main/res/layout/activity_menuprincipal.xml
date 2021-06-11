@@ -58,6 +58,12 @@
             android:text="ENVOI DES DONNEES VERS UP" />
 
         <Button
+            android:id="@+id/btnfraisexc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="unclique"
+            android:text="FRAIS EXCEPTIONNELS" />
+        <Button
             android:id="@+id/btnparametres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -35,8 +35,8 @@ public class fraisauforfait extends menuprincipal  {
     int mm = calendrier.get(Calendar.MONTH);
     int jj = calendrier.get(Calendar.DAY_OF_MONTH);
     //tableaux des montants frais au forfait
-    Double montantfrais[]=new Double[]{0.62,110.00,80.00,25.00};
-    String Typefrais[]=new String []{"","Forfait Km","Forfait étape","Forfait hotel","Repas Restaurant"};
+    Double montantfrais[]=new Double[]{0.62,110.00,80.00,25.00,01.90};
+    String Typefrais[]=new String []{"","Forfait Km","Forfait étape","Forfait hotel","Repas Restaurant","Tickets de bus"};
     private Object fraisauforfait;
 
 

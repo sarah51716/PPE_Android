@@ -22,8 +22,14 @@ public class SQLHelper extends SQLiteOpenHelper {
         public static final String KEY_QUANTITE = "QUANTITE";
         public static final String KEY_TYPEDEFRAIS = "TYPEDEFRAIS";
 
-        private static final String DB_TABLE1 = "Visiteur";
+        private static final String DB_TABLE1 = "FraisExceptionnels";
         public static final String KEY_ID2 = "ID";
+        public static final String KEY_LIBELLE2= "LIBELLE";
+        public static final String KEY_MONTANT2 = "MONTANT";
+        public static final String KEY_DATEDESAISIE = "DATEDESAISIE";
+        public static final String KEY_DATEDEFRAIS2 = "DATEDEFRAIS";
+        public static final String KEY_DESCRIPTION = "DESCRIPTION";
+
 
         private static final String TAG = "SQLHelper";
         private SQLHelper dbHelper;
@@ -31,7 +37,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 
         // private static final String CREATE_TABLE = "CREATE TABLE " + DB_TABLE +" ("+ ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + NAME + " TEXT" + ")";
         private static final String CREATE_TABLE = "CREATE TABLE NoteDeForfait (ID INTEGER PRIMARY KEY AUTOINCREMENT, TYPEDEFRAIS TEXT, LIBELLE TEXT, QUANTITE INTEGER, MONTANT FLOAT,DATEDEFRAIS TEXT, DATEDESAISIT DATETIME DEFAULT CURRENT_TIMESTAMP)";
-        private static final String CREATE_TABLE1 = "CREATE TABLE Visiteur (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOM TEXT, PRENOM TEXT, PASSWORD TEXT)";
+        private static final String CREATE_TABLE1 = "CREATE TABLE FraisExceptionnels (ID INTEGER PRIMARY KEY AUTOINCREMENT, LIBELLE TEXT, MONTANT FLOAT,DATEDEFRAIS TEXT, DATEDESAISIT DATETIME DEFAULT CURRENT_TIMESTAMP, DESCRIPTION TEXT)";
 
 
 
@@ -49,6 +55,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
             sqLiteDatabase.execSQL(CREATE_TABLE);
+            sqLiteDatabase.execSQL(CREATE_TABLE1);
         }
 
         @Override

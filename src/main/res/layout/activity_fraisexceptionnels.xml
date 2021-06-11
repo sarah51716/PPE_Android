@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fraisexceptionnels">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/logogros" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Frais Exceptionnels"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/libelle"
+                    android:layout_width="137dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Libelle:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/libellesaisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/montant"
+                android:layout_width="149dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="Montant:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/montantsaisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="178dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:text="Date:"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/Date"
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:onClick="ShowCal"
+                tools:srcCompat="@drawable/calendar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/descriptionSaisie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textLongMessage|textPersonName" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAjouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C5E9F8"
+            android:onClick="MonClick"
+            android:text="Ajouter"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/retour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#2DABE0"
+                android:onClick="clique_btn6"
+                android:text="Retour" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
