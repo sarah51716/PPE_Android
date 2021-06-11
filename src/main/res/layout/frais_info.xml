@@ -128,7 +128,7 @@
     <ImageView
         android:id="@+id/poubelle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignRight="@+id/libelle"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 

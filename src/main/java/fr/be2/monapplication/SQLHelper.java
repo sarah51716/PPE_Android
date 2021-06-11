@@ -63,9 +63,9 @@ public class SQLHelper extends SQLiteOpenHelper {
         public boolean insertData(String typefrais, String libelle, Integer quantite, Double montant, String date){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
-            contentValues.put(KEY_DATEDEFRAIS,typefrais);
-            contentValues.put("LIBELLE", libelle);
-            contentValues.put("QUANTITE", quantite);
+            contentValues.put(KEY_TYPEDEFRAIS,typefrais);
+            contentValues.put(KEY_LIBELLE, libelle);
+            contentValues.put(KEY_QUANTITE, quantite);
             contentValues.put(KEY_MONTANT, montant);
             contentValues.put(KEY_DATEDEFRAIS, date);
             long result = db.insert(DB_TABLE, null, contentValues);
